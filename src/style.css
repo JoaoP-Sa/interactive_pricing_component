@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    background-image: url('../public/img/bg-pattern.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    min-width: 280px;
+}
+
+.box-container{
+    padding-bottom: 100px;
+}
+
+.title-subtitle{
+    padding: 0 10px;
+}
+
+.title-subtitle h3, p{
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.title-subtitle h3{
+    font-weight: 800;
+    color: #2a3052;
+    font-size: 30px;
+    padding: 100px 0 10px 0;
+}
+
+.title-subtitle p, span, .benefits{
+    color: #8e94a4;
+}
+
+.circles-bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: -110px auto 0 auto;
+    height: 160px;
+}
+
+.container{
+    width: 42%;
+    max-width: 900px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 120px auto 0 auto;
+    -webkit-box-shadow: 0px 17px 24px -1px #ECEDF2; 
+    box-shadow: 0px 17px 24px -1px #ECEDF2;
+}
+
+.prices{
+    text-align: center;
+    padding: 0 50px 30px 50px;
+    border-bottom: 1px solid #f1f1f3;
+}
+
+.price-rules{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 0 10px 0;
+}
+
+.price-mounth{
+    position: relative;
+    top: -20px;
+}
+
+.price-mounth strong{
+    font-size: 40px;
+    position: relative;
+    right: 5px;
+    color: #2e344a;
+}
+
+.price-mounth span{
+    position: relative;
+    top: -10px;
+}
+
+input[type=range]{
+    width: 100%;
+    appearance: none;
+    background: linear-gradient(90deg, #a2f3ec 50%, #ecf3fd 50%);
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+    /*Abaixo temos o código acima com o prefixo -webkit- para que as propriedades do input range
+    funcionem no google chrome*/
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 42px;
+    height: 42px;
+    background-image: url('../public/img/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #11d8c3;
+    border-radius: 21px;
+    cursor: pointer;
+}
+    /*Abaixo temos o código acima com o prefixo -moz- para que as propriedades do input range
+    funcionem no firefox*/
+input[type=range]::-moz-range-thumb{
+    width: 42px;
+    height: 42px;
+    background-image: url('../public/img/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #11d8c3;
+    border-radius: 21px;
+    cursor: pointer;
+}
+    /*Abaixo temos o código acima com o prefixo -webkit- para que as propriedades do input range
+    funcionem no google chrome*/
+input[type=range]::-webkit-slider-thumb:hover{
+    -webkit-box-shadow: 0px 20px 28px 5px rgba(17,216,195,0.3); 
+    box-shadow: 0px 20px 28px 5px rgba(17,216,195,0.3);
+}
+    /*Abaixo temos o código acima com o prefixo -moz- para que as propriedades do input range
+    funcionem no firefox*/
+input[type=range]::-moz-range-thumb:hover{
+    -webkit-box-shadow: 0px 20px 28px 5px rgba(17,216,195,0.3); 
+    box-shadow: 0px 20px 28px 5px rgba(17,216,195,0.3);
+}
+
+.time-billing{
+    display: flex;
+    padding: 55px 0 20px 0;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.time-billing span{
+    text-align: right;
+    font-size: 15px;
+}
+
+.discount{
+    background-color: #fff1ea;
+    border-radius: 15px;
+    padding: 2px 6px;
+    margin: 0 10px;
+}
+
+.mobile{
+    display: none;
+}
+
+.discount span{
+    font-size: 12px !important;
+    position: relative;
+    top: -2px;
+    color: #dbab97;
+}
+
+.switch{
+    width: 50px;
+    height: 28px;
+    padding: 0 4px;
+    margin: 0 20px;
+    border-radius: 15px;
+    background-color: #6da8a3;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch:not(.active){
+    background-color: #d0d9ea;
+}
+
+.circle{
+    display: block;
+    width: calc(50% - 4px);
+    height: calc(80% - 4px);
+    border-radius: 50%;
+    background-color: white;
+    transform: translateX(150%);
+    transition: transform .2s ease;
+}
+
+.circle:not(.active){
+    transform:translateX(0);
+}
+
+
+.start-trial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 50px 30px 50px;
+}
+
+.benefits p{
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.trial-button{
+    color: white;
+    border: none;
+    background-color: #293356;
+    font-size: 15px;
+    padding: 10px 45px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1180px){
+    .container{
+        width: 50%;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .price-rules{
+        flex-direction: column;
+    }
+
+    .price-rules span{
+        position: relative;
+        top: -25px;
+    }
+    
+    .price-mounth{
+        margin-top: 65px;
+    }
+    
+    .discount{
+        padding: 0 10px !important;
+        position: relative;
+        top: -7px;
+        
+    }
+
+    .time-billing{
+        padding: 35px 0 20px 0;
+    }
+
+    .discount span{
+        font-size: 10px !important;
+        position: relative;
+        top: 0.5px;
+    }
+    
+    .start-trial{
+        flex-direction: column;
+        padding: 25px 50px 30px 50px;
+    }
+
+    .benefits{
+        padding-bottom: 30px;
+    }
+
+    .benefits p{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 970px){
+    .time-billing{
+        justify-content: center;
+    }
+    
+    .discount{
+        margin: 0 0 0 10px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .time-billing{
+        justify-content: right;
+    }
+    
+    .discount{
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 645px){
+    .container{
+        width: 90%;
+        margin: 60px auto 0 auto;
+    }
+    
+    .title-subtitle h3{
+        font-size: 20px;
+        padding: 100px 0 10px 0;
+    }
+
+    .title-subtitle p{
+        font-size: 13px;
+        width: 50%;
+        min-width: 180px;
+        line-height: 27px;
+        margin: 0 auto;
+    }
+
+    .circles-bg{
+        margin: -130px auto 0 auto;
+        height: 150px;
+    }
+
+    .prices{
+        padding: 0 8px 25px 8px;
+    }
+
+    .price-rules span{
+        font-size: 18px;
+    }
+
+    input[type=range]{
+        width: 90%;
+    }
+
+    .price-mounth strong{
+        font-size: 30px;
+    }
+    
+    .price-mounth span{
+        position: relative;
+        font-size: 12px;
+        top: -5px;
+    }
+
+    .time-billing{
+        padding: 25px 0 20px 0;
+    }
+
+    .time-billing span{
+        font-size: 11px;
+    }
+
+    .switch{
+        width: 40px;
+        height: 22px;
+        padding: 0 4px;
+        margin: 0 12px;
+        border-radius: 15px;
+        background-color: #6da8a3;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .circle{
+        display: block;
+        width: calc(53% - 4px);
+        height: calc(80% - 4px);
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    .discount{
+        top: -5px;
+    }
+
+    .discount span{
+        top: -2px;
+    }
+
+    .benefits p{
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    .benefits p:last-of-type{
+        padding-bottom: 0;
+    }
+    
+    .trial-button{
+        background-color: #293356;
+        font-size: 13px;
+        padding: 10px 45px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .time-billing span{
+        font-size: 10px;
+    }
+
+    .switch{
+        width: 30px;
+        height: 18px;
+        padding: 0 4px;
+        margin: 0 5px;
+    }
+    
+    .circle{
+        display: block;
+        width: calc(50% - 2px);
+        height: calc(80% - 4px);
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    .discount{
+        margin: 0 5px;
+    }
+
+    .discount span{
+        font-size: 10px !important;
+    }
+}
